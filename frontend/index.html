@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="theme-color" content="#6366f1" />
+  <title>Career Guidance Chatbot | AI-Powered Career Advisor</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <div class="logo-wrapper">
+        <i class="fas fa-graduation-cap"></i>
+      </div>
+      <div class="brand-text">
+        <h1>CareerGuide AI</h1>
+        <span>NLP-Powered Career Advisor</span>
+      </div>
+    </div>
+    
+    <div class="nav-controls">
+      <button class="btn-icon" onclick="toggleTheme()" title="Toggle theme">
+        <i class="fas fa-moon" id="theme-icon"></i>
+      </button>
+      <div class="status-pill">
+        <span class="status-dot pulse"></span>
+        <span>Online</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Layout -->
+  <div class="app-container">
+    
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <button class="mobile-close" onclick="toggleSidebar()">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <div class="nav-section">
+        <h3><i class="fas fa-compass"></i> Explore Careers</h3>
+        <div class="nav-items">
+          <button class="nav-item" onclick="sendQuick('Tell me about software engineering career')">
+            <span class="icon">💻</span>
+            <span class="text">Software Engineering</span>
+            <i class="fas fa-chevron-right"></i>
+          </button>
+          <button class="nav-item" onclick="sendQuick('Data science career path')">
+            <span class="icon">📊</span>
+            <span class="text">Data Science & AI</span>
+            <i class="fas fa-chevron-right"></i>
+          </button>
+          <button class="nav-item" onclick="sendQuick('How to become a doctor')">
+            <span class="icon">🏥</span>
+            <span class="text">Medicine & Healthcare</span>
+            <i class="fas fa-chevron-right"></i>
+          </button>
+          <button class="nav-item" onclick="sendQuick('MBA and business career')">
+            <span class="icon">📈</span>
+            <span class="text">Business & MBA</span>
+            <i class="fas fa-chevron-right"></i>
+          </button>
+          <button class="nav-item" onclick="sendQuick('Engineering career options')">
+            <span class="icon">⚙️</span>
+            <span class="text">Engineering</span>
+            <i class="fas fa-chevron-right"></i>
+          </button>
+          <button class="nav-item" onclick="sendQuick('Government job career')">
+            <span class="icon">🏛️</span>
+            <span class="text">Government Jobs</span>
+            <i class="fas fa-chevron-right"></i>
+          </button>
+          <button class="nav-item" onclick="sendQuick('Design and creative career')">
+            <span class="icon">🎨</span>
+            <span class="text">Design & Creative</span>
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="nav-section">
+        <h3><i class="fas fa-lightbulb"></i> Quick Actions</h3>
+        <div class="quick-actions">
+          <button class="action-chip" onclick="sendQuick('What skills do I need for a good job?')">
+            🛠️ Skills Guide
+          </button>
+          <button class="action-chip" onclick="sendQuick('What is the salary for different careers?')">
+            💰 Salary Info
+          </button>
+          <button class="action-chip" onclick="sendQuick('Should I do masters or MBA after graduation?')">
+            🎓 Higher Studies
+          </button>
+          <button class="action-chip" onclick="sendQuick('How to prepare for job interviews?')">
+            📝 Interview Prep
+          </button>
+          <button class="action-chip highlight" onclick="sendQuick('I am confused about my career')">
+            🤔 Career Confusion
+          </button>
+        </div>
+      </div>
+
+      <div class="stats-card">
+        <h3><i class="fas fa-chart-line"></i> Session Stats</h3>
+        <div class="stats-grid">
+          <div class="stat-box">
+            <span class="stat-num" id="msg-count">0</span>
+            <span class="stat-label">Messages</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-num" id="topic-count">0</span>
+            <span class="stat-label">Topics</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-num" id="confidence-avg">0%</span>
+            <span class="stat-label">Avg Confidence</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Chat Area -->
+    <main class="chat-wrapper">
+      <button class="sidebar-toggle" onclick="toggleSidebar()">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <div class="chat-header glass">
+        <div class="header-info">
+          <div class="avatar-ring">
+            <i class="fas fa-robot"></i>
+          </div>
+          <div class="header-text">
+            <h2>Career Advisor</h2>
+            <p><span class="typing-status" id="status-text">Ask me anything about your career</span></p>
+          </div>
+        </div>
+        <div class="header-actions">
+          <button class="btn-secondary" onclick="exportChat()" title="Export chat">
+            <i class="fas fa-download"></i>
+          </button>
+          <button class="btn-secondary danger" onclick="clearChat()" title="New chat">
+            <i class="fas fa-trash-alt"></i> New Chat
+          </button>
+        </div>
+      </div>
+
+      <!-- Messages Container -->
+      <div class="messages-container" id="messages">
+        <!-- Welcome Screen -->
+        <div class="welcome-screen" id="welcome-screen">
+          <div class="welcome-content">
+            <div class="welcome-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h1>Hello! I'm your Career Advisor</h1>
+            <p class="welcome-desc">
+              I can guide you on career paths, required skills, salary expectations, 
+              higher studies options, and more. What would you like to explore?
+            </p>
+            
+            <div class="suggestion-grid">
+              <div class="suggestion-card" onclick="sendQuick('Tell me about Software Engineering')">
+                <div class="s-icon">💻</div>
+                <div class="s-text">Software Engineering</div>
+              </div>
+              <div class="suggestion-card" onclick="sendQuick('Data Science career scope')">
+                <div class="s-icon">📊</div>
+                <div class="s-text">Data Science</div>
+              </div>
+              <div class="suggestion-card" onclick="sendQuick('How to become a doctor')">
+                <div class="s-icon">🏥</div>
+                <div class="s-text">Medicine</div>
+              </div>
+              <div class="suggestion-card" onclick="sendQuick('Government jobs preparation')">
+                <div class="s-icon">🏛️</div>
+                <div class="s-text">Govt Jobs</div>
+              </div>
+              <div class="suggestion-card wide" onclick="sendQuick('I am confused about my career')">
+                <div class="s-icon">🤔</div>
+                <div class="s-text">Help me decide my career path</div>
+              </div>
+              <div class="suggestion-card wide" onclick="sendQuick('What is the salary for freshers in different fields?')">
+                <div class="s-icon">💰</div>
+                <div class="s-text">Salary Information</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Typing Indicator -->
+      <div class="typing-area" id="typing" style="display:none">
+        <div class="typing-bubble">
+          <div class="bot-icon-small">
+            <i class="fas fa-robot"></i>
+          </div>
+          <div class="typing-animation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Input Area -->
+      <div class="input-container glass">
+        <div class="input-wrapper">
+          <textarea 
+            id="user-input" 
+            placeholder="Ask about careers, skills, salary, higher studies..." 
+            rows="1"
+            maxlength="500"
+          ></textarea>
+          <div class="input-actions">
+            <span class="char-count" id="char-count">0/500</span>
+            <button class="send-btn" id="send-btn" onclick="sendMessage()">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+        </div>
+        <p class="disclaimer">
+          <i class="fas fa-info-circle"></i>
+          Press <kbd>Enter</kbd> to send, <kbd>Shift+Enter</kbd> for new line • 
+          Powered by NLP (TF-IDF + Logistic Regression)
+        </p>
+      </div>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>
+      <i class="fas fa-code"></i> Career Guidance Chatbot • 
+      Built with Python, Flask, NLTK & scikit-learn • 
+      <span class="badge">NLP Project 2024</span>
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

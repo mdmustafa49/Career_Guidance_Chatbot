@@ -1,0 +1,212 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hello", "Hi", "Hey", "Good morning", "Good evening",
+        "What's up", "Howdy", "Greetings", "Hi there", "Hey there"
+      ],
+      "responses": [
+        "Hello! Welcome to Career Guidance. How can I help you today?",
+        "Hi there! I'm your career guidance assistant. What would you like to know?",
+        "Hey! Ready to help you find your perfect career path!"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye", "Goodbye", "See you", "See you later", "Take care",
+        "I'm leaving", "Good night", "Later", "Quit", "Exit"
+      ],
+      "responses": [
+        "Goodbye! Best of luck with your career journey!",
+        "Take care! Feel free to come back anytime for career guidance.",
+        "Bye! Wishing you great success in your career!"
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Thanks", "Thank you", "That's helpful", "Thanks a lot",
+        "Thank you so much", "Awesome thanks", "Great thanks"
+      ],
+      "responses": [
+        "You're welcome! Is there anything else I can help you with?",
+        "Happy to help! Let me know if you have more questions.",
+        "Glad I could assist! Feel free to ask more."
+      ]
+    },
+    {
+      "tag": "career_options",
+      "patterns": [
+        "What are my career options", "Tell me about career paths",
+        "What careers are available", "What jobs can I do",
+        "Career choices", "What field should I choose",
+        "I don't know what career to pick", "Help me choose a career",
+        "What are good careers", "Best career options"
+      ],
+      "responses": [
+        "There are many exciting career paths! Some popular ones include: Software Engineering, Data Science, Medicine, Law, Business Management, Teaching, Design, and Engineering. What are your interests or strengths? That will help me give better guidance!",
+        "Career options depend on your skills and interests. Top fields right now include Technology, Healthcare, Finance, Education, and Creative Arts. Would you like to explore any specific field?"
+      ]
+    },
+    {
+      "tag": "software_engineering",
+      "patterns": [
+        "I want to be a software engineer", "Software engineering career",
+        "How to become a software developer", "Career in coding",
+        "Programming career", "I like coding", "Computer science career",
+        "Software development", "Become a programmer", "IT career"
+      ],
+      "responses": [
+        "Software Engineering is a fantastic choice! Here's how to get started:\n\n1. Learn programming languages: Python, Java, or JavaScript\n2. Study Data Structures & Algorithms\n3. Build projects and contribute to open source\n4. Get a B.Tech/B.E. in Computer Science or related field\n5. Practice on platforms like LeetCode and HackerRank\n\nTop companies hiring: Google, Microsoft, Amazon, TCS, Infosys. Average salary in India: ₹5–25 LPA depending on experience.",
+        "Great choice! Software engineers are in high demand. Focus on: strong programming fundamentals, system design, and problem-solving. Consider specializations like Web Development, Mobile Apps, AI/ML, or Cloud Computing."
+      ]
+    },
+    {
+      "tag": "data_science",
+      "patterns": [
+        "Data science career", "How to become a data scientist",
+        "I like data analysis", "Machine learning career",
+        "AI career", "Artificial intelligence career",
+        "Data analyst career", "Big data", "I want to work with data",
+        "NLP career", "Deep learning"
+      ],
+      "responses": [
+        "Data Science is one of the hottest careers right now! To get started:\n\n1. Learn Python and R programming\n2. Master Statistics and Mathematics\n3. Learn libraries: pandas, numpy, scikit-learn, TensorFlow\n4. Study Machine Learning and Deep Learning\n5. Work on real datasets from Kaggle\n\nRoles: Data Analyst, Data Scientist, ML Engineer, AI Researcher\nSalary in India: ₹6–30 LPA. Globally in high demand!",
+        "Excellent field! Data Science combines math, programming, and domain knowledge. Start with Python, statistics, and work your way up to ML and AI. Platforms like Coursera and edX have great courses."
+      ]
+    },
+    {
+      "tag": "medicine",
+      "patterns": [
+        "Medical career", "How to become a doctor", "I want to be a doctor",
+        "Career in medicine", "MBBS career", "Healthcare career",
+        "Become a surgeon", "Medical field", "I like biology",
+        "Doctor career path"
+      ],
+      "responses": [
+        "Medicine is a noble and rewarding career! Here's the path:\n\n1. Complete 10+2 with Biology, Physics, Chemistry\n2. Clear NEET entrance exam\n3. Pursue MBBS (5.5 years)\n4. Do internship (1 year)\n5. Optionally pursue MD/MS for specialization\n\nSpecializations: Surgery, Pediatrics, Cardiology, Neurology, Psychiatry\nSalary: ₹8–50 LPA depending on specialization and experience.",
+        "Becoming a doctor requires dedication and hard work but is extremely fulfilling. NEET is the key entrance exam in India. After MBBS, you can specialize in areas like Cardiology, Oncology, or General Practice."
+      ]
+    },
+    {
+      "tag": "engineering",
+      "patterns": [
+        "Engineering career", "I want to be an engineer",
+        "Mechanical engineering", "Civil engineering", "Electrical engineering",
+        "How to become an engineer", "B.Tech career",
+        "Which engineering branch is best", "Engineering options"
+      ],
+      "responses": [
+        "Engineering offers many exciting branches! Here are the top ones:\n\n🔧 Mechanical Engineering – Design, manufacturing, automobiles\n🏗️ Civil Engineering – Construction, infrastructure\n⚡ Electrical Engineering – Power systems, electronics\n💻 Computer Science – Software, AI, systems\n🧪 Chemical Engineering – Pharma, oil & gas\n\nPath: Clear JEE Mains/Advanced → B.Tech (4 years) → Work or M.Tech\nSalary: ₹4–20 LPA starting, goes much higher with experience.",
+        "Engineering is a great career with diverse options. Computer Science and Electronics are the most in-demand currently. Focus on strong fundamentals and practical projects."
+      ]
+    },
+    {
+      "tag": "business_management",
+      "patterns": [
+        "Business career", "MBA career", "Management career",
+        "I want to do business", "Entrepreneurship",
+        "How to become a manager", "Finance career",
+        "Marketing career", "HR career", "Business administration"
+      ],
+      "responses": [
+        "Business and Management offer wide-ranging opportunities!\n\nPaths to consider:\n1. BBA → MBA (most common route)\n2. CA (Chartered Accountant) for Finance\n3. B.Com for commerce background\n\nSpecializations: Finance, Marketing, HR, Operations, Entrepreneurship\n\nTop MBA colleges: IIMs, XLRI, ISB\nSalary post-MBA: ₹8–40 LPA\n\nEntrepreneurship is also a great option if you have a business idea!",
+        "Business management is perfect if you love strategy and leadership. An MBA from a top institute can open doors to senior roles. You can also start your own business after gaining experience."
+      ]
+    },
+    {
+      "tag": "design",
+      "patterns": [
+        "Design career", "Graphic design career", "UI UX career",
+        "I like designing", "Creative career", "Fashion design",
+        "Interior design career", "How to become a designer",
+        "Animation career", "I am creative"
+      ],
+      "responses": [
+        "Design is a fantastic creative career! Options include:\n\n🎨 Graphic Design – Visual branding, print, digital\n💻 UI/UX Design – App and website design\n👗 Fashion Design – Clothing, textiles\n🏠 Interior Design – Spaces and environments\n🎬 Animation & VFX – Films, games, media\n\nKey skills: Adobe Suite, Figma, creativity, communication\nCourses: NID, NIFT, Symbiosis Design\nSalary: ₹3–20 LPA, freelancing also very lucrative!",
+        "Creative careers are booming! UI/UX design especially is in huge demand with the tech industry. Build a strong portfolio and learn tools like Figma, Adobe XD, and Illustrator."
+      ]
+    },
+    {
+      "tag": "skills_needed",
+      "patterns": [
+        "What skills do I need", "Skills for getting a job",
+        "Important skills", "What should I learn",
+        "Skills employers want", "Top skills in demand",
+        "How to improve my skills", "Skills for career success"
+      ],
+      "responses": [
+        "Here are the most in-demand skills in today's job market:\n\n💻 Technical Skills:\n• Programming (Python, Java, JavaScript)\n• Data Analysis\n• Cloud Computing (AWS, Azure)\n• Cybersecurity\n\n🤝 Soft Skills:\n• Communication\n• Problem Solving\n• Teamwork\n• Time Management\n• Leadership\n\nRemember: A combination of technical + soft skills makes you stand out!",
+        "Employers look for both hard and soft skills. For tech roles: programming and analytical skills. For any role: communication, adaptability, and problem-solving are universally valued."
+      ]
+    },
+    {
+      "tag": "salary",
+      "patterns": [
+        "How much will I earn", "Salary information",
+        "What is the salary", "How much do engineers make",
+        "Expected salary", "Income after graduation",
+        "Highest paying jobs", "Best paying careers",
+        "Which career pays the most"
+      ],
+      "responses": [
+        "Here are approximate salaries in India (fresher level):\n\n💰 Software Engineer: ₹4–12 LPA\n💰 Data Scientist: ₹6–15 LPA\n💰 Doctor (after MBBS): ₹8–15 LPA\n💰 MBA Graduate: ₹6–20 LPA\n💰 CA: ₹7–15 LPA\n💰 UI/UX Designer: ₹4–10 LPA\n💰 Civil Engineer: ₹3–8 LPA\n\nSalaries grow significantly with experience. In global companies or abroad, these numbers can be 3–5x higher!",
+        "Salary depends on the field, company, and your skills. Tech and Finance tend to pay the most. Upskilling consistently is the best way to increase your earning potential."
+      ]
+    },
+    {
+      "tag": "higher_studies",
+      "patterns": [
+        "Should I do masters", "Higher studies options",
+        "MS or MBA", "PhD career", "Study abroad",
+        "GRE preparation", "GATE exam", "Higher education",
+        "Postgraduate options", "M.Tech vs MBA"
+      ],
+      "responses": [
+        "Higher studies can significantly boost your career! Here are your options:\n\n🎓 M.Tech/MS – Best for technical depth, research\n📊 MBA – Best for management, leadership roles\n🔬 PhD – For research and academia\n📋 Professional certifications – Quick skill boosts\n\nExams to prepare:\n• GATE – For M.Tech in India/PSUs\n• GRE/GMAT – For abroad\n• CAT/XAT – For MBA in India\n\nStudying abroad (USA, UK, Canada, Germany) is excellent for tech careers!",
+        "Higher studies depend on your goals. If you want technical expertise → M.Tech/MS. If you want leadership/business roles → MBA. If you love research → PhD. All are valuable paths!"
+      ]
+    },
+    {
+      "tag": "aptitude_test",
+      "patterns": [
+        "How to prepare for interviews", "Job interview tips",
+        "Aptitude test preparation", "Campus placement tips",
+        "How to get placed", "Resume tips", "How to write a resume",
+        "Internship tips", "How to get internship"
+      ],
+      "responses": [
+        "Here are tips to crack interviews and placements:\n\n📄 Resume:\n• Keep it 1 page, clear and concise\n• Highlight projects and internships\n• Use action verbs\n\n🧠 Aptitude:\n• Practice on IndiaBix, PrepInsta\n• Focus on Quant, Logical Reasoning, Verbal\n\n💻 Technical:\n• Practice coding on LeetCode, HackerRank\n• Revise core subjects (OS, DBMS, CN for CS)\n\n🗣️ HR Round:\n• Prepare for 'Tell me about yourself'\n• Research the company well",
+        "Placement preparation requires consistent effort. Start with a strong resume, practice aptitude daily, and do mock interviews. Internships and projects on your resume make a huge difference!"
+      ]
+    },
+    {
+      "tag": "confused",
+      "patterns": [
+        "I am confused", "I don't know what to do",
+        "I have no idea", "I'm lost", "Can't decide",
+        "Not sure about my career", "What should I do with my life",
+        "I don't know my passion", "Help me decide"
+      ],
+      "responses": [
+        "It's completely okay to be confused — most students feel this way! Here's how to figure it out:\n\n1. List your interests and hobbies\n2. Identify your strengths (what are you good at?)\n3. Think about what problems you want to solve\n4. Talk to professionals in fields you're curious about\n5. Take career aptitude tests online\n\nRemember: There's no single 'right' career. The best career is one that aligns your skills, interests, and values. Tell me more about what you enjoy and I'll help you narrow it down!",
+        "Don't worry! Confusion is the first step to clarity. Try answering these: What subject do you enjoy most? Are you more people-oriented or task-oriented? Do you prefer creativity or analysis? Your answers will point us in the right direction!"
+      ]
+    },
+    {
+      "tag": "government_jobs",
+      "patterns": [
+        "Government job", "UPSC career", "Civil services",
+        "IAS IPS career", "SSC exam", "Bank job",
+        "Government sector", "PSU jobs", "Railway jobs",
+        "Defence career", "Army career"
+      ],
+      "responses": [
+        "Government jobs offer stability and great benefits! Here are the main paths:\n\n🏛️ Civil Services (IAS/IPS/IFS) – UPSC exam, most prestigious\n🏦 Banking – IBPS PO/Clerk, SBI PO\n⚙️ PSUs – Through GATE exam (BHEL, ONGC, etc.)\n🚂 Railways – RRB exams\n🛡️ Defence – NDA, CDS, AFCAT\n📊 SSC – Various government departments\n\nAdvantage: Job security, pension, social respect\nTip: Start preparing early, these exams are competitive!",
+        "Government careers are highly respected in India. UPSC for civil services is the toughest but most rewarding. Banking and PSU jobs through GATE/IBPS are also excellent options with great stability."
+      ]
+    }
+  ]
+}
